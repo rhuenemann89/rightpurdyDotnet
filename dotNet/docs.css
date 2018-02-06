@@ -1,0 +1,199 @@
+html {
+    font-size: 10pt;
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+
+@media (min-width: 400px) {
+    p {
+        font-size: 3.2vw;
+    }
+}
+
+@media (min-width: 900px) {
+    p {
+        font-size: 22pt;
+    }
+}
+
+.scene_element {
+    bottom: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.header-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+body {
+    background-color: rgb(128, 128, 128);
+    margin: 0px;
+    color: white;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+
+
+.navbar a:hover {
+    background: linear-gradient(rgb(189, 189, 189), rgb(126, 126, 126));
+    box-shadow: 0 -4px -8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    color: black;
+}
+
+.bg-dark {
+    background: linear-gradient(rgb(68, 68, 68), rgb(17, 17, 17));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.navbar a {
+    width: 70px;
+    text-align: center;
+}
+
+.navbar-collapse a {
+    width: 70px;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+
+
+button {
+    color: var(--color);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+
+button:hover, button:focus {
+    border-color: var(--hover);
+    color: #fff;
+}
+
+button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+
+.fill {
+    --color: #a972cb;
+    --hover: #cb72aa;
+}
+
+    .fill:hover,
+    .fill:focus {
+        -webkit-box-shadow: inset 0 0 0 2em var(--hover);
+        box-shadow: inset 0 0 0 2em var(--hover);
+    }
+
+
+
+.header {
+    margin: 5%;
+}
+
+
+
+.videoWrapper {
+    margin: auto;
+    width: 75%;
+    max-width: 600px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    border: medium;
+}
+
+h1 {
+    font-size: 5vw;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+    text-shadow: 2px 2px rgb(68, 68, 68);
+    color: black;
+}
+
+p {
+    margin: 5%;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+.scene_element {
+    animation-duration: 0.35s;
+    transition-timing-function: ease-in;
+}
+
+/** An element that fades in */
+.scene_element--fadein {
+    animation-name: fadeIn;
+}
+
+/** An element that fades in and slides up */
+.scene_element--fadeinup {
+    animation-name: fadeInUp;
+}
+
+/** An element that fades in and slides from the right */
+.scene_element--fadeinright {
+    animation-name: fadeInRight;
+}
