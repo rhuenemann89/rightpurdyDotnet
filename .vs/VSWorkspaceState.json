@@ -3,11 +3,11 @@
     "",
     "\\dotNet",
     "\\dotNet\\js",
-    "\\dotNet\\objects",
-    "\\dotNet\\objects\\Roary",
+    "\\dotNet\\js\\objects",
+    "\\dotNet\\js\\objects\\RoaryPoly",
     "\\GettingStartedWBabylon",
     "\\GettingStartedWBabylon\\WebContent"
   ],
-  "SelectedNode": "\\dotNet",
+  "SelectedNode": "\\dotNet\\js",
   "PreviewInSolutionExplorer": false
 }
