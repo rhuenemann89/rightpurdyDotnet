@@ -57,8 +57,9 @@ html, body {
             // Add and manipulate meshes in the scene
             var box = BABYLON.MeshBuilder.CreateBox("box", {height: 1, width: 0.75, depth: 0.25}, scene);
             
-            BABYLON.SceneLoader.Append("/objects/", "RoaryForPoly.obj", scene, function (scene) {
-                // do something with the scene
+            BABYLON.SceneLoader.ImportMesh("", "objects/RoaryPoly/", "RoaryForPoly.obj", scene, function (scene) {
+                // Set the target of the camera to the first imported mesh
+        camera.target = newMeshes[0];
             });
             
 
