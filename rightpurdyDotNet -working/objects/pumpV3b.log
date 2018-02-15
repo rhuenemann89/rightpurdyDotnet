@@ -1,0 +1,151 @@
+	Exporter version: 4.6.1, Blender version: 2.79 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  false
+		flat shading entire scene:  false
+		inline textures:  false
+		texture directory:  C:\Users\rosst\source\repos\rightpurdyDotnet\rightpurdyDotNet -working\objects\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of node:  RP_Pump
+	processing begun of mesh:  Coverplate
+		processing begun of Standard material:  RPpump
+			Diffuse texture found "Texture"
+				Image texture found, type:  diffuseTexture, mapped using: "ID397"
+		num positions      :  10575
+		num normals        :  10575
+		num uvs            :  21150
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  51033
+	processing begun of mesh:  boltD
+		registered as also a user of material:  RPpump
+		num positions      :  162
+		num normals        :  162
+		num uvs            :  324
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  246
+	processing begun of mesh:  boltC
+		registered as also a user of material:  RPpump
+		num positions      :  162
+		num normals        :  162
+		num uvs            :  324
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  246
+	processing begun of mesh:  boltB
+		registered as also a user of material:  RPpump
+		num positions      :  162
+		num normals        :  162
+		num uvs            :  324
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  246
+	processing begun of mesh:  boltA
+		registered as also a user of material:  RPpump
+		num positions      :  162
+		num normals        :  162
+		num uvs            :  324
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  246
+	processing begun of mesh:  centerhub
+		animation processing begun
+			processing action Action:  in[1 - 72], out[0 - 72]
+			processing action centerhubAction:  in[1 - 72], out[80 - 152]
+			processing action finAAction:  in[1 - 72], out[160 - 232]
+			processing action finBAction:  in[1 - 72], out[240 - 312]
+			processing action finCAction:  in[1 - 72], out[320 - 392]
+			processing action finDAction:  in[1 - 72], out[400 - 472]
+		registered as also a user of material:  RPpump
+		num positions      :  192
+		num normals        :  192
+		num uvs            :  384
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1143
+	processing begun of mesh:  finD
+		animation processing begun
+			processing action Action:  in[1 - 72], out[0 - 72]
+			processing action centerhubAction:  in[1 - 72], out[80 - 152]
+			processing action finAAction:  in[1 - 72], out[160 - 232]
+			processing action finBAction:  in[1 - 72], out[240 - 312]
+			processing action finCAction:  in[1 - 72], out[320 - 392]
+			processing action finDAction:  in[1 - 72], out[400 - 472]
+		registered as also a user of material:  RPpump
+		num positions      :  222
+		num normals        :  222
+		num uvs            :  444
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  612
+	processing begun of mesh:  finC
+		animation processing begun
+			processing action Action:  in[1 - 72], out[0 - 72]
+			processing action centerhubAction:  in[1 - 72], out[80 - 152]
+			processing action finAAction:  in[1 - 72], out[160 - 232]
+			processing action finBAction:  in[1 - 72], out[240 - 312]
+			processing action finCAction:  in[1 - 72], out[320 - 392]
+			processing action finDAction:  in[1 - 72], out[400 - 472]
+		registered as also a user of material:  RPpump
+		num positions      :  222
+		num normals        :  222
+		num uvs            :  444
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  612
+	processing begun of mesh:  finB
+		animation processing begun
+			processing action Action:  in[1 - 72], out[0 - 72]
+			processing action centerhubAction:  in[1 - 72], out[80 - 152]
+			processing action finAAction:  in[1 - 72], out[160 - 232]
+			processing action finBAction:  in[1 - 72], out[240 - 312]
+			processing action finCAction:  in[1 - 72], out[320 - 392]
+			processing action finDAction:  in[1 - 72], out[400 - 472]
+		registered as also a user of material:  RPpump
+		num positions      :  222
+		num normals        :  222
+		num uvs            :  444
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  612
+	processing begun of mesh:  finA
+		animation processing begun
+			processing action Action:  in[1 - 72], out[0 - 72]
+			processing action centerhubAction:  in[1 - 72], out[80 - 152]
+			processing action finAAction:  in[1 - 72], out[160 - 232]
+			processing action finBAction:  in[1 - 72], out[240 - 312]
+			processing action finCAction:  in[1 - 72], out[320 - 392]
+			processing action finDAction:  in[1 - 72], out[400 - 472]
+		registered as also a user of material:  RPpump
+		num positions      :  222
+		num normals        :  222
+		num uvs            :  444
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  612
+	processing begun of mesh:  Motor
+		registered as also a user of material:  RPpump
+		num positions      :  8305
+		num normals        :  8305
+		num uvs            :  16610
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  18558
+	processing begun of mesh:  floor
+		processing begun of Standard material:  floor
+		num positions      :  28
+		num normals        :  28
+		num uvs            :  56
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of light (POINT):  Lightfill
+	processing begun of light (POINT):  Lightkey
+	processing begun of light (POINT):  Lightrim
+	processing begun of light (POINT):  Lamp
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.885 secs
