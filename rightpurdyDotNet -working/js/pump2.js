@@ -13,11 +13,14 @@ window.addEventListener('DOMContentLoaded', function() {
     var createScene = function() {
         BABYLONX.ShaderBuilder.InitializeEngine();
         // Create the scene space
-        BABYLON.SceneLoader.Load("objects/", "pumpV3c.babylon", engine, function(scene){
+        BABYLON.SceneLoader.Load("objects/", "pumpV4.babylon", engine, function(scene){
             scene.executeWhenReady(function(){
 
                 var lid = scene.getMeshByName("Coverplate");
                 lid.isVisible = true;
+                
+                var motor = scene.getMeshByName("Motor");
+                motor.isVisible = true;
                 
                 var hub = scene.getMeshByName("centerhub");
 
@@ -26,48 +29,65 @@ window.addEventListener('DOMContentLoaded', function() {
                 var boltC = scene.getMeshByName("boltC");
                 var boltD = scene.getMeshByName("boltD");
 
+                var startPoint1 = scene.beginAnimation(lid, 0, 1, false);
+                var startPoint2 = scene.beginAnimation(boltA, 982, 983, false);
+                var startPoint3 = scene.beginAnimation(boltB, 1122, 1123, false);
+                var startPoint4 = scene.beginAnimation(boltC, 1262, 1263, false);
+                var startPoint5 = scene.beginAnimation(boltD, 1402, 1403, false);
 
+                
+                // Camera Light
                 var light = new BABYLON.PointLight("Omni", new BABYLON.Vector3(20, 20, 100), scene);
                 light.intensity = 0.25;
 
+                
+                // Camera
                 // Parameters: alpha, beta, radius, target position, scene
                 var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 10, new BABYLON.Vector3(0, 0, 0), scene);
-
                 // Positions the camera overwriting alpha, beta, radius
-                camera.setPosition(new BABYLON.Vector3(0, 0, 20));
-
-
+                camera.setPosition(new BABYLON.Vector3(5, 5, 5));
                 // This attaches the camera to the canvas
                 camera.attachControl(canvas, true);
-
+                // Camera Limits
                 camera.lowerBetaLimit = 0.1;
                 camera.upperBetaLimit = (Math.PI / 2) * 0.99;
-                camera.lowerRadiusLimit = 4;
-
+                camera.lowerRadiusLimit = 3;
+                camera.wheelPrecision = 50; 
                 camera.target = hub;
 
-                // The box creation
+                
+                
+                
+                
+                // skybox
                 var skybox = BABYLON.Mesh.CreateBox("skyBox", 500.0, scene);
 
                 // The sky creation
-
                 BABYLON.Effect.ShadersStore.gradientVertexShader = "precision mediump float;attribute vec3 position;attribute vec3 normal;attribute vec2 uv;uniform mat4 worldViewProjection;varying vec4 vPosition;varying vec3 vNormal;void main(){vec4 p = vec4(position,1.);vPosition = p;vNormal = normal;gl_Position = worldViewProjection * p;}";
 
                 BABYLON.Effect.ShadersStore.gradientPixelShader = "precision mediump float;uniform mat4 worldView;varying vec4 vPosition;varying vec3 vNormal;uniform float offset;uniform vec3 topColor;uniform vec3 bottomColor;void main(void){float h = normalize(vPosition+offset).y;gl_FragColor = vec4(mix(bottomColor,topColor,max(pow(max(h,0.0),0.6),0.0)),1.0);}";
-
 
                 var shader = new BABYLON.ShaderMaterial("gradient", scene, "gradient", {});
                 shader.setFloat("offset", 10);
                 shader.setColor3("topColor", BABYLON.Color3.FromInts(0,119,255));
                 shader.setColor3("bottomColor", BABYLON.Color3.FromInts(102,102,102));
-
                 shader.backFaceCulling = false;
-
                 // box + sky = skybox !
                 skybox.material = shader;
                 
 
+                
+                
+                
+                //lid animation
                 var openUp = function (mesh){
+                    
+                    var lidAnimation
+                    var boltAAnimation
+                    var boltBAnimation
+                    var boltCAnimation
+                    var boltDAnimation
+                    
                     mesh.actionManager = new BABYLON.ActionManager(scene);
 
                     
@@ -77,55 +97,63 @@ window.addEventListener('DOMContentLoaded', function() {
                                 trigger: BABYLON.ActionManager.OnPickTrigger,
                                 parameter: mesh
                             },
-                            function(){ mesh.translate(BABYLON.Axis.Y, -120, BABYLON.Space.LOCAL); 
-                                        boltA.translate(BABYLON.Axis.Y, -130, BABYLON.Space.LOCAL); 
-                                        boltB.translate(BABYLON.Axis.Y, -130, BABYLON.Space.LOCAL);
-                                        boltC.translate(BABYLON.Axis.Y, -130, BABYLON.Space.LOCAL);
-                                        boltD.translate(BABYLON.Axis.Y, -130, BABYLON.Space.LOCAL);
+                            function(){ lidAnimation = scene.beginAnimation(lid, 140, 164, false);
+                                        boltAAnimation = scene.beginAnimation(boltA, 292, 313, false);
+                                       boltBAnimation = scene.beginAnimation(boltB, 432, 453, false);
+                                       boltCAnimation = scene.beginAnimation(boltC, 572, 593, false);
+                                       boltDAnimation = scene.beginAnimation(boltD, 712, 733, false);
+                                        
+                                        
                                       }
                         )
                     )
                     .then(
-                        new BABYLON.ExecuteCodeAction({
+                        new BABYLON.ExecuteCodeAction(
+                            {
                                 trigger: BABYLON.ActionManager.OnPickTrigger,
-                                parameter: mesh},
+                                parameter: mesh
+                            },
 
-                            function(){ mesh.translate(BABYLON.Axis.Y, 120, BABYLON.Space.LOCAL); 
-                                        boltA.translate(BABYLON.Axis.Y, 130, BABYLON.Space.LOCAL); 
-                                        boltB.translate(BABYLON.Axis.Y, 130, BABYLON.Space.LOCAL);
-                                        boltC.translate(BABYLON.Axis.Y, 130, BABYLON.Space.LOCAL);
-                                        boltD.translate(BABYLON.Axis.Y, 130, BABYLON.Space.LOCAL);
+                            function(){ lidAnimation = scene.beginAnimation(lid, 172, 196, false);
+                                        boltAAnimation = scene.beginAnimation(boltA, 319, 343, false);
+                                        boltBAnimation = scene.beginAnimation(boltB, 459, 483, false);
+                                        boltCAnimation = scene.beginAnimation(boltC, 599, 623, false);
+                                        boltDAnimation = scene.beginAnimation(boltD, 739, 763, false);
                                       }
                             )
-                        );
+                    );
                     
-                mesh.actionManager.registerAction(
-                    new BABYLON.ExecuteCodeAction(
-                        {
-                            trigger: BABYLON.ActionManager.OnPointerOutTrigger,
+                    
+                    // hover text box
+                    mesh.actionManager.registerAction(
+                        new BABYLON.ExecuteCodeAction(
+                            {
+                                trigger: BABYLON.ActionManager.OnPointerOutTrigger,
+                                parameter: mesh
+                            },
+                            function(){ advancedTexture._rootContainer.isVisible = false;
+                                      }
+                        )
+                    );
+                    mesh.actionManager.registerAction(
+                        new BABYLON.ExecuteCodeAction(
+                            {
+                            trigger: BABYLON.ActionManager.OnPointerOverTrigger,
                             parameter: mesh
-                        },
-                        function(){ advancedTexture._rootContainer.isVisible = false;
-                                  }
-                    )
-                );
-                mesh.actionManager.registerAction(
-                    new BABYLON.ExecuteCodeAction(
-                        {
-                        trigger: BABYLON.ActionManager.OnPointerOverTrigger,
-                        parameter: mesh
-                        },
-                        function(){ advancedTexture._rootContainer.isVisible = true;
-                                  }
-                    )
-                );
+                            },
+                            function(){ advancedTexture._rootContainer.isVisible = true;
+                                      }
+                        )
+                    );
                     
 
                 }
 
+                // apply animation to lid
                 openUp(lid);
                 
                 
+                // text box design
                 var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
 
                 var rect1 = new BABYLON.GUI.Rectangle();
@@ -148,10 +176,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
                 
                 
-                
-                
+                //end of scene functions
 
                 scene.registerBeforeRender(function () {
+                // attach light to camera
                 light.position = camera.position;
                 });
 
@@ -163,23 +191,15 @@ window.addEventListener('DOMContentLoaded', function() {
         });
 
 
-
-
-
         return scene;
 
     }
 
-
-    /******* End of the create scene function ******/
-
     //call scene
     var scene = createScene();
-    //register render loop on canvas
-
-    //window resize event handler
-    window.addEventListener('resize', function() {
-        engine.resize();
-    });
-        
+ 
    });
+
+
+
+
