@@ -2,13 +2,14 @@ html {
     font-size: 10pt;
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
+    
 }
 
 body {
     background-color: rgb(128, 128, 128);
     margin: 0px;
     color: white;
-
+    
 }
 
 @media (min-width: 400px) {
@@ -31,6 +32,7 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
+    z-index: -1;
 }
 
 .header-img {
@@ -69,21 +71,14 @@ img {
     color: black;
 }
 
-.bg-dark {
+.navbar-inverse {
     background: linear-gradient(rgb(68, 68, 68), rgb(17, 17, 17));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
-#navbarCollapse {
-    text-align: center;
-}
 
-.navbar-brand{
-    font-size:25px;
-}
-
-.navbar-toggler:focus{
-
+p.navbar-brand {
+    color:blue;
 }
 
 button {
@@ -131,9 +126,7 @@ button:hover, button:focus {
     transform: translateY(-0.25em);
 }
 
-.header {
-    margin: 5%;
-}
+
 
 .videoWrapper {
     margin: auto;
@@ -153,10 +146,7 @@ h1 {
     color: black;
 }
 
-p {
-    margin: 5%;
-    text-align: center;
-}
+
 
 @keyframes fadeIn {
     0% {
