@@ -62,39 +62,42 @@
     <div w3-include-html="navbar.html"></div>
     <script>w3.includeHTML();</script>
 
-
+<div class="page">
     <div class="scene_element scene_element--fadeinright">
 
-        <nav style="margin:4%;min-height: 40px;"></nav>
+        
 
-        <div class="header">
             <div class="header-img"></div>
             <div class="header-color"></div>
-
+            <div id="container">
             <h1>Interactive</h1>
             
-            
-            <center><canvas onmouseover="document.body.style.overflow='hidden';"  onmouseout="document.body.style.overflow='auto';" id="renderCanvas"></canvas></center>
-
-            <center><p>Try it out!</p></center>
-            
+            <center>
+                <iframe width="640" height="480" src="https://rawgit.com/rhuenemann89/rightpurdyDotnet/master/rightpurdyDotNet%20-working/iframePump.html" frameborder="0" allowfullscreen>
+                </iframe>
+            </center>
+                
+                
+            <center>
+                <button class="button">Click me for fullscreen</button>
+                <p>Try it out!</p>
+            </center>
+            </div>
             <div style="margin-bottom: 0px; min-height: 120px;"></div>
             
-        </div>
-        
+      
+       </div> 
+    
+    </div>
         <div id="footer" w3-include-html="footer.html"></div>
         <script>w3.includeHTML();</script>
 
         
        
-    </div>
-    <script type="text/javascript" src="https://cdn.babylonjs.com/babylon.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/pep/0.4.1/pep.js"></script>
     
-    <script type="text/javascript" src="https://rawgit.com/BabylonJS/Extensions/master/ShaderBuilder/Babylonx.ShaderBuilder.js"></script>
-
-    <script type="text/javascript" src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
-    <script type="text/javascript" src="https://rawgit.com/rhuenemann89/rightpurdyDotnet/master/rightpurdyDotNet%20-working/js/pump2.js"></script>
+    <script src="">
+    
+    </script>
 
 </body>
 </html>
