@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var createScene = function() {
         BABYLONX.ShaderBuilder.InitializeEngine();
         // Create the scene space
-        BABYLON.SceneLoader.Load("https://rawgit.com/rhuenemann89/rightpurdyDotnet/master/rightpurdyDotNet%20-working/objects/", "pumpV4.babylon", engine, function(scene){
+        BABYLON.SceneLoader.Load("https://rawgit.com/rhuenemann89/rightpurdyDotnet/master/referenced/pump/objects/", "pumpV4.babylon", engine, function(scene){
             scene.executeWhenReady(function(){
 
                 var lid = scene.getMeshByName("Coverplate");
