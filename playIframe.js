@@ -1,9 +1,6 @@
-function load_pump() {
-        var iframePump = document.getElementById("pump");
-        iframePump.src = "https://rawgit.com/rhuenemann89/rightpurdyDotnet/master/pump.html";
-    }
+document.getElementById("start_pump").onclick = function() {myFunction()};
 
-function load_astro() {
-        var iframeAstro = document.getElementById("astro");
-        iframeAstro.src = "https://rawgit.com/rhuenemann89/rightpurdyDotnet/master/astro.html";
+function myFunction() {
+    document.getElementById("pump").src = "https://rawgit.com/rhuenemann89/rightpurdyDotnet/master/referenced/pump/iframePump.html";
 }
+
