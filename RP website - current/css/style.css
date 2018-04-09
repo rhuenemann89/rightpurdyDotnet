@@ -1,0 +1,417 @@
+/*Small devices (landscape phones, 576px and up) */
+@media (min-width: 300px) {
+    .text, .cards, .interactiv {
+        font-size: 2.7vw;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-bottom: 10%;
+    }
+
+    body {
+        padding-bottom: 400vw;
+    }
+
+    .start {
+        width: 5em;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .text, .cards, .interactiv {
+        font-size: 2.7vw;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+    }
+
+    body {
+        padding-bottom: 300vw;
+    }
+
+    .start {
+        width: 5em;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .text, .cards, .interactiv {
+        font-size: 20pt;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+    }
+
+    body {
+        padding-bottom: 250vw;
+    }
+
+    .start {
+        width: 10em;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .text, .cards, .interactiv {
+        font-size: 20pt;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+    }
+
+    body {
+        padding-bottom: 250vw;
+    }
+
+    .start {
+        width: 10em;
+    }
+}
+
+
+
+/* Basic */
+html {
+    font-size: 10pt;
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: rgb(128, 128, 128);
+    margin: 0px;
+    color: white;
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    z-index: -1;
+}
+
+
+
+/* Writing */
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 5vw;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    color: white;
+    padding: 2%;
+}
+
+h2 {
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 5%;
+    text-decoration: underline;
+    text-shadow: 3px 3px 5px black;
+}
+
+.text {
+    font-family: 'Tillana', cursive;
+    text-shadow: 3px 3px 5px black;
+    color: white;
+    background: linear-gradient(rgb(128, 128, 128), rgb(68, 68, 68));
+    box-shadow: 5px 10px 20px 3px rgb(17, 17, 17);
+    border-radius: 7px;
+    padding: 7%;
+}
+
+
+
+/* Cards */
+.page-inner {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.cards {
+    font-family: 'Tillana', cursive;
+    text-shadow: 3px 3px 5px black;
+    color: white;
+    font-weight: bold;
+}
+
+.card {
+    color: black;
+    font-size: 2.7vw;
+}
+
+.card-write {
+    padding: 5%;
+    text-align:center;
+}
+
+.card-contain {
+    width: 100%;
+    position: relative;
+}
+
+#cardimg {
+    border-radius: 50%;
+}
+
+#shortimg {
+    box-shadow: 5px 5px 20px 3px rgb(17, 17, 17);
+}
+
+
+/* Navbar */
+.bg-dark {
+    background: linear-gradient(rgb(68, 68, 68), rgb(17, 17, 17));
+    box-shadow: 5px 5px 20px 3px rgb(17, 17, 17);
+}
+
+.navbar-toggler:focus {
+    outline: 0;
+}
+
+.navbar-toggler {
+    border: double;
+    width: 3em;
+}
+
+
+
+/* Background */
+.header-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.header-color {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+}
+
+
+/* Buttons */
+button {
+    color: whitesmoke;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    border-radius: 8px;
+    width: 10em;
+    padding: 0.7em;
+}
+
+button:hover {
+    border-color: var(--hover);
+    color: #f5c409;
+}
+
+.fill {
+    --color: #a972cb;
+    --hover: #cb72aa;
+}
+
+.fill:hover,
+.fill:focus {
+    -webkit-box-shadow: inset 0 0 0 2em var(--hover);
+    box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.raise {
+    --color: #f5c409;
+    --hover: #f5c409;
+}
+
+.raise:hover {
+    -webkit-box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+}
+
+
+
+/* Videos */
+iframe {
+    border-radius: 3px;
+}
+
+.videoWrapper {
+    margin: auto;
+    width: 100%;
+    max-width: 1920px;
+    box-shadow: 5px 10px 20px 3px rgb(17, 17, 17);
+    background-color: transparent;
+    border: medium;
+    border-radius: 3px;
+}
+
+.video {
+    padding-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+/* Page Flip */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.scene_element {
+    bottom: 100%;
+    position: absolute;
+    margin: auto;
+    top: 8rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    animation-duration: 0.35s;
+    transition-timing-function: ease-in;
+}
+
+/** An element that fades in */
+.scene_element--fadein {
+    animation-name: fadeIn;
+}
+
+/** An element that fades in and slides up */
+.scene_element--fadeinup {
+    animation-name: fadeInUp;
+}
+
+/** An element that fades in and slides from the right */
+.scene_element--fadeinright {
+    animation-name: fadeInRight;
+}
+
+
+/* Extras */
+.interactiv {
+    padding: 5%;
+}
+
+#link {
+    color: white;
+}
+
+#link:hover {
+    color: darkblue;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.youtube:hover {
+    color: darkred;
+}
+
+.youtube {
+    color: #b21212;
+}
+
+
+
+/* Footer */
+.page-footer {
+    background: linear-gradient(rgb(68, 68, 68), rgb(17, 17, 17));
+    box-shadow: 5px -2px 12px 2px black;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+/* Interactive Containers */
+.intrinsic-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    box-shadow: 5px -2px 12px 2px black;
+    border-radius: 8px;
+}
+
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+    padding-bottom: 56.25%;
+}
+
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+    padding-bottom: 75%;
+}
+
+.intrinsic-container iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.load {
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+}
