@@ -1,7 +1,7 @@
 document.getElementById("start_pump").onclick = function() {load_pump()};
 
 function load_pump() {
-    document.getElementById("pump").src = "https://rawgit.com/rhuenemann89/rightpurdyDotnet/master/pump.html";
+    document.getElementById("pump").src = "https://rawgit.com/rhuenemann89/rightpurdyDotnet/master/referenced/pump.html";
     document.getElementById("astro").src = "astro.png";
     var x = document.getElementById("start_pump");
     x.style.display = "none";
